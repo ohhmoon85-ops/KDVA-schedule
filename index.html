@@ -15,10 +15,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            padding: 10px;
+            line-height: 1.6;
         }
 
         .container {
@@ -26,9 +24,10 @@
             backdrop-filter: blur(10px);
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
+            max-width: 500px;
             width: 100%;
-            padding: 40px;
+            margin: 0 auto;
+            padding: 20px;
             animation: fadeInUp 0.8s ease-out;
         }
 
@@ -45,35 +44,35 @@
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
             border-bottom: 3px solid #667eea;
         }
 
         .header h1 {
             color: #333;
-            font-size: 2.5em;
+            font-size: 1.8em;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .header p {
             color: #666;
-            font-size: 1.2em;
+            font-size: 0.95em;
             font-weight: 500;
         }
 
         .rsvp-notice {
             background: linear-gradient(45deg, #ff6b6b, #ee5a24);
             color: white;
-            padding: 20px;
+            padding: 18px 15px;
             border-radius: 15px;
             text-align: center;
-            margin-bottom: 30px;
-            font-size: 1.3em;
+            margin-bottom: 20px;
+            font-size: 1.1em;
             font-weight: bold;
-            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 8px 16px rgba(255, 107, 107, 0.3);
             animation: pulse 2s infinite;
         }
 
@@ -84,47 +83,24 @@
         }
 
         .events {
-            display: grid;
-            gap: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .event-card {
             background: linear-gradient(145deg, #f8f9fa, #e9ecef);
             border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             border-left: 5px solid;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .event-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.5s;
-            opacity: 0;
-        }
-
-        .event-card:hover::before {
-            animation: shine 0.8s ease-in-out;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
-        }
-
-        .event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        .event-card:active {
+            transform: scale(0.98);
         }
 
         .golf-event {
@@ -138,16 +114,15 @@
         .event-date {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: #495057;
-            font-size: 1.4em;
+            font-size: 1.2em;
             font-weight: bold;
         }
 
         .event-date::before {
-            content: '📅';
-            margin-right: 10px;
-            font-size: 1.2em;
+            margin-right: 8px;
+            font-size: 1.1em;
         }
 
         .golf-event .event-date::before {
@@ -159,60 +134,155 @@
         }
 
         .event-title {
-            font-size: 1.6em;
+            font-size: 1.3em;
             font-weight: bold;
             color: #333;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .event-details {
-            display: grid;
-            gap: 12px;
-            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 15px;
         }
 
         .detail-item {
             display: flex;
-            align-items: center;
-            padding: 12px;
+            align-items: flex-start;
+            padding: 10px;
             background: rgba(255, 255, 255, 0.7);
-            border-radius: 10px;
-            font-size: 1.1em;
+            border-radius: 8px;
+            font-size: 0.95em;
+            line-height: 1.4;
         }
 
         .detail-icon {
-            margin-right: 12px;
-            font-size: 1.3em;
-            width: 30px;
+            margin-right: 10px;
+            font-size: 1.1em;
+            width: 20px;
             text-align: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .detail-text {
+            flex: 1;
         }
 
         .footer {
-            margin-top: 40px;
-            padding-top: 20px;
+            margin-top: 25px;
+            padding-top: 15px;
             border-top: 2px solid #dee2e6;
             text-align: center;
             color: #6c757d;
             font-style: italic;
+            font-size: 0.9em;
+            line-height: 1.5;
         }
 
-        @media (max-width: 768px) {
-            .container {
+        /* 태블릿 최적화 */
+        @media (min-width: 768px) {
+            body {
                 padding: 20px;
-                margin: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .container {
+                max-width: 600px;
+                padding: 30px;
             }
             
             .header h1 {
-                font-size: 2em;
+                font-size: 2.2em;
+            }
+            
+            .header p {
+                font-size: 1.1em;
             }
             
             .rsvp-notice {
-                font-size: 1.1em;
-                padding: 15px;
+                font-size: 1.2em;
+                padding: 20px;
             }
             
             .event-card {
-                padding: 20px;
+                padding: 25px;
+            }
+            
+            .event-date {
+                font-size: 1.3em;
+            }
+            
+            .event-title {
+                font-size: 1.5em;
+            }
+            
+            .detail-item {
+                font-size: 1em;
+                padding: 12px;
+            }
+            
+            .event-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+        /* 데스크톱 최적화 */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 700px;
+                padding: 40px;
+            }
+        }
+
+        /* 매우 작은 화면 최적화 */
+        @media (max-width: 320px) {
+            .container {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.6em;
+            }
+            
+            .rsvp-notice {
+                font-size: 1em;
+                padding: 15px 12px;
+            }
+            
+            .event-card {
+                padding: 15px;
+            }
+            
+            .event-date {
+                font-size: 1.1em;
+            }
+            
+            .event-title {
+                font-size: 1.2em;
+            }
+            
+            .detail-item {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+        }
+
+        /* 터치 디바이스 최적화 */
+        @media (hover: none) and (pointer: coarse) {
+            .event-card:hover {
+                transform: none;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            }
+            
+            .detail-item {
+                min-height: 44px;
+                align-items: center;
             }
         }
     </style>
@@ -235,15 +305,15 @@
                 <div class="event-details">
                     <div class="detail-item">
                         <div class="detail-icon">🕐</div>
-                        <div><strong>시간:</strong> 오전 8시</div>
+                        <div class="detail-text"><strong>시간:</strong> 오전 8시</div>
                     </div>
                     <div class="detail-item">
                         <div class="detail-icon">📍</div>
-                        <div><strong>장소:</strong> 평택 해군 체력단련장</div>
+                        <div class="detail-text"><strong>장소:</strong> 평택 해군 체력단련장</div>
                     </div>
                     <div class="detail-item">
                         <div class="detail-icon">⛳</div>
-                        <div><strong>티:</strong> 4개 준비</div>
+                        <div class="detail-text"><strong>티:</strong> 4개 준비</div>
                     </div>
                 </div>
             </div>
@@ -254,15 +324,15 @@
                 <div class="event-details">
                     <div class="detail-item">
                         <div class="detail-icon">🕔</div>
-                        <div><strong>시간:</strong> 오후 5시 (17:00)</div>
+                        <div class="detail-text"><strong>시간:</strong> 오후 5시 (17:00)</div>
                     </div>
                     <div class="detail-item">
                         <div class="detail-icon">🏢</div>
-                        <div><strong>장소:</strong> DHL</div>
+                        <div class="detail-text"><strong>장소:</strong> DHL</div>
                     </div>
                     <div class="detail-item">
                         <div class="detail-icon">📋</div>
-                        <div><strong>내용:</strong> 연말 성과분석</div>
+                        <div class="detail-text"><strong>내용:</strong> 연말 성과분석</div>
                     </div>
                 </div>
             </div>
