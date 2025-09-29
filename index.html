@@ -114,9 +114,9 @@
         .event-date {
             display: flex;
             align-items: center;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             color: #495057;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: bold;
         }
 
@@ -138,6 +138,24 @@
             font-weight: bold;
             color: #333;
             margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .participant-count {
+            background: linear-gradient(45deg, #28a745, #20c997);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+        }
+
+        .meeting-event .participant-count {
+            background: linear-gradient(45deg, #007bff, #6610f2);
+            box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
         }
 
         .event-details {
@@ -170,6 +188,80 @@
             flex: 1;
         }
 
+        .participants-section {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            border: 2px solid rgba(40, 167, 69, 0.2);
+        }
+
+        .meeting-event .participants-section {
+            border-color: rgba(0, 123, 255, 0.2);
+        }
+
+        .participants-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 1em;
+        }
+
+        .participants-title::before {
+            content: '👥';
+            margin-right: 8px;
+        }
+
+        .teams {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .team {
+            padding: 8px 10px;
+            background: rgba(40, 167, 69, 0.1);
+            border-radius: 8px;
+            font-size: 0.85em;
+            border-left: 3px solid #28a745;
+        }
+
+        .team-number {
+            font-weight: bold;
+            color: #28a745;
+            margin-right: 8px;
+        }
+
+        .team-members {
+            color: #495057;
+        }
+
+        .incomplete-team {
+            background: rgba(255, 193, 7, 0.1);
+            border-left-color: #ffc107;
+        }
+
+        .incomplete-team .team-number {
+            color: #e67e22;
+        }
+
+        .participants-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .participant-name {
+            background: rgba(0, 123, 255, 0.1);
+            color: #495057;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            border: 1px solid rgba(0, 123, 255, 0.2);
+        }
+
         .footer {
             margin-top: 25px;
             padding-top: 15px;
@@ -191,7 +283,7 @@
             }
             
             .container {
-                max-width: 600px;
+                max-width: 650px;
                 padding: 30px;
             }
             
@@ -223,6 +315,16 @@
             .detail-item {
                 font-size: 1em;
                 padding: 12px;
+            }
+            
+            .teams {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 10px;
+            }
+            
+            .participants-list {
+                justify-content: flex-start;
             }
             
             .event-card:hover {
@@ -265,11 +367,18 @@
             
             .event-title {
                 font-size: 1.2em;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
             }
             
             .detail-item {
                 font-size: 0.9em;
                 padding: 8px;
+            }
+            
+            .participants-section {
+                padding: 12px;
             }
         }
 
@@ -301,7 +410,10 @@
         <div class="events">
             <div class="event-card golf-event">
                 <div class="event-date">2024년 11월 12일 (수요일)</div>
-                <div class="event-title">골프 모임</div>
+                <div class="event-title">
+                    골프 모임
+                    <span class="participant-count">11명 참석</span>
+                </div>
                 <div class="event-details">
                     <div class="detail-item">
                         <div class="detail-icon">🕐</div>
@@ -316,11 +428,36 @@
                         <div class="detail-text"><strong>티:</strong> 4개 준비</div>
                     </div>
                 </div>
+                
+                <div class="participants-section">
+                    <div class="participants-title">참석자 및 팀 구성</div>
+                    <div class="teams">
+                        <div class="team">
+                            <span class="team-number">1팀:</span>
+                            <span class="team-members">윤의철, 황성진, 박기경, 최진택</span>
+                        </div>
+                        <div class="team">
+                            <span class="team-number">2팀:</span>
+                            <span class="team-members">허태근, 서헌원, 박용준, 이영길</span>
+                        </div>
+                        <div class="team incomplete-team">
+                            <span class="team-number">3팀:</span>
+                            <span class="team-members">김정혁, 문형철, 변지수, <em>1명 모집중</em></span>
+                        </div>
+                        <div class="team incomplete-team">
+                            <span class="team-number">4팀:</span>
+                            <span class="team-members"><em>4명 모집중</em></span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="event-card meeting-event">
                 <div class="event-date">2024년 12월 5일 (금요일)</div>
-                <div class="event-title">연말 성과분석 회의</div>
+                <div class="event-title">
+                    연말 성과분석 회의
+                    <span class="participant-count">12명 참석</span>
+                </div>
                 <div class="event-details">
                     <div class="detail-item">
                         <div class="detail-icon">🕔</div>
@@ -333,6 +470,24 @@
                     <div class="detail-item">
                         <div class="detail-icon">📋</div>
                         <div class="detail-text"><strong>내용:</strong> 연말 성과분석</div>
+                    </div>
+                </div>
+                
+                <div class="participants-section">
+                    <div class="participants-title">참석자 명단</div>
+                    <div class="participants-list">
+                        <span class="participant-name">윤의철</span>
+                        <span class="participant-name">황성진</span>
+                        <span class="participant-name">박기경</span>
+                        <span class="participant-name">최진택</span>
+                        <span class="participant-name">허태근</span>
+                        <span class="participant-name">서헌원</span>
+                        <span class="participant-name">박용준</span>
+                        <span class="participant-name">이영길</span>
+                        <span class="participant-name">김정혁</span>
+                        <span class="participant-name">문형철</span>
+                        <span class="participant-name">변지수</span>
+                        <span class="participant-name">황일웅</span>
                     </div>
                 </div>
             </div>
