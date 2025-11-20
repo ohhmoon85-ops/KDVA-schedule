@@ -115,6 +115,10 @@
             border-left-color: #fd7e14;
         }
 
+        .mou-event {
+            border-left-color: #6f42c1;
+        }
+
         .event-date {
             display: flex;
             align-items: center;
@@ -139,6 +143,10 @@
 
         .special-event .event-date::before {
             content: '🎉';
+        }
+
+        .mou-event .event-date::before {
+            content: '🤝';
         }
 
         .event-title {
@@ -170,6 +178,11 @@
         .special-event .participant-count {
             background: linear-gradient(45deg, #fd7e14, #ffc107);
             box-shadow: 0 2px 8px rgba(253, 126, 20, 0.3);
+        }
+
+        .mou-event .participant-count {
+            background: linear-gradient(45deg, #6f42c1, #9b59b6);
+            box-shadow: 0 2px 8px rgba(111, 66, 193, 0.3);
         }
 
         .vip-badge {
@@ -226,6 +239,10 @@
 
         .special-event .participants-section {
             border-color: rgba(253, 126, 20, 0.2);
+        }
+
+        .mou-event .participants-section {
+            border-color: rgba(111, 66, 193, 0.2);
         }
 
         .participants-title {
@@ -288,6 +305,21 @@
             border-radius: 6px;
             font-size: 0.85em;
             border: 1px solid rgba(0, 123, 255, 0.2);
+        }
+
+        .participant-group {
+            margin-bottom: 10px;
+        }
+
+        .participant-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .group-label {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #6c757d;
+            margin-bottom: 5px;
         }
 
         .footer {
@@ -431,9 +463,10 @@
             <p>Korea Defense Veterans Association</p>
         </div>
 
+        <div class="events">
             <!-- 12월 2일: 한미우호협회의 한미우호의 밤 -->
             <div class="event-card special-event">
-                <div class="event-date">2025년 12월 2일 (화요일)</div>
+                <div class="event-date">2024년 12월 2일 (월요일)</div>
                 <div class="event-title">
                     한미우호의 밤
                     <span class="participant-count">6명 참석</span>
@@ -466,12 +499,12 @@
                 </div>
             </div>
 
-            <!-- 12월 5일: 연말 성과분석 회의 (기존) -->
+            <!-- 12월 5일: 연말 성과분석 회의 -->
             <div class="event-card meeting-event">
-                <div class="event-date">2025년 12월 5일 (금요일)</div>
+                <div class="event-date">2024년 12월 5일 (목요일)</div>
                 <div class="event-title">
                     연말 성과분석 회의
-                    <span class="participant-count">13명 참석</span>
+                    <span class="participant-count">14명 참석</span>
                 </div>
                 <div class="event-details">
                     <div class="detail-item">
@@ -509,9 +542,118 @@
                 </div>
             </div>
 
+            <!-- 12월 8일: AKUS MOU 체결 -->
+            <div class="event-card mou-event">
+                <div class="event-date">2024년 12월 8일 (일요일)</div>
+                <div class="event-title">
+                    AKUS MOU 체결
+                    <span class="participant-count">12명 참석</span>
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🕐</div>
+                        <div class="detail-text"><strong>시간:</strong> 오전 11시 (11:00)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> 로카우스 (ROCAUS)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📋</div>
+                        <div class="detail-text"><strong>내용:</strong> AKUS와 MOU 체결식</div>
+                    </div>
+                </div>
+                
+                <div class="participants-section">
+                    <div class="participants-title">참석자 명단</div>
+                    <div class="participant-group">
+                        <div class="group-label">AKUS (5명)</div>
+                        <div class="participants-list">
+                            <span class="participant-name">AKUS 대표단</span>
+                        </div>
+                    </div>
+                    <div class="participant-group">
+                        <div class="group-label">KDVA (5명)</div>
+                        <div class="participants-list">
+                            <span class="participant-name">윤의철</span>
+                            <span class="participant-name">허태근</span>
+                            <span class="participant-name">황일웅</span>
+                            <span class="participant-name">문형철</span>
+                            <span class="participant-name">김정혁</span>
+                        </div>
+                    </div>
+                    <div class="participant-group">
+                        <div class="group-label">KATUSA (2명)</div>
+                        <div class="participants-list">
+                            <span class="participant-name">최진택</span>
+                            <span class="participant-name">이영길</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12월 17일: 육군협회 페밀리데이 -->
+            <div class="event-card special-event">
+                <div class="event-date">2024년 12월 17일 (화요일)</div>
+                <div class="event-title">
+                    육군협회 페밀리데이
+                    <span class="participant-count">2명 참석</span>
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🕐</div>
+                        <div class="detail-text"><strong>시간:</strong> 오전 10시 (10:00)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> 피스&파크 (Peace & Park)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎉</div>
+                        <div class="detail-text"><strong>주최:</strong> 육군협회 (AROKA)</div>
+                    </div>
+                </div>
+                
+                <div class="participants-section">
+                    <div class="participants-title">참석자 명단</div>
+                    <div class="participants-list">
+                        <span class="participant-name">윤의철</span>
+                        <span class="participant-name">양태봉</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12월 18일: 전후임 회장단 모임 -->
+            <div class="event-card meeting-event">
+                <div class="event-date">2024년 12월 18일 (수요일)</div>
+                <div class="event-title">
+                    전후임 회장단 모임
+                    <span class="participant-count">3명 참석</span>
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🏢</div>
+                        <div class="detail-text"><strong>장소:</strong> DHL</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📋</div>
+                        <div class="detail-text"><strong>내용:</strong> 전현직 회장단 회의</div>
+                    </div>
+                </div>
+                
+                <div class="participants-section">
+                    <div class="participants-title">참석자 명단</div>
+                    <div class="participants-list">
+                        <span class="participant-name">권오성</span>
+                        <span class="participant-name">최병혁</span>
+                        <span class="participant-name">윤의철</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- 12월 말: 험프리스챕터 개소식 -->
             <div class="event-card meeting-event">
-                <div class="event-date">2025년 12월 말 (예정)</div>
+                <div class="event-date">2024년 12월 말 (예정)</div>
                 <div class="event-title">
                     험프리스챕터 개소식
                 </div>
