@@ -119,6 +119,16 @@
             border-left-color: #6f42c1;
         }
 
+        .new-year-event {
+            border-left-color: #dc3545;
+            background: linear-gradient(145deg, #fff5f5, #ffe6e6);
+        }
+
+        .education-event {
+            border-left-color: #17a2b8;
+            background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
+        }
+
         .event-date {
             display: flex;
             align-items: center;
@@ -147,6 +157,14 @@
 
         .mou-event .event-date::before {
             content: '🤝';
+        }
+
+        .new-year-event .event-date::before {
+            content: '🎊';
+        }
+
+        .education-event .event-date::before {
+            content: '🎓';
         }
 
         .event-title {
@@ -185,6 +203,16 @@
             box-shadow: 0 2px 8px rgba(111, 66, 193, 0.3);
         }
 
+        .new-year-event .participant-count {
+            background: linear-gradient(45deg, #dc3545, #e74c3c);
+            box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+        }
+
+        .education-event .participant-count {
+            background: linear-gradient(45deg, #17a2b8, #20c997);
+            box-shadow: 0 2px 8px rgba(23, 162, 184, 0.3);
+        }
+
         .vip-badge {
             background: linear-gradient(45deg, #dc3545, #e74c3c);
             color: white;
@@ -193,6 +221,16 @@
             font-size: 0.75em;
             font-weight: bold;
             box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+        }
+
+        .session-badge {
+            background: linear-gradient(45deg, #17a2b8, #138496);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(23, 162, 184, 0.3);
         }
 
         .event-details {
@@ -245,6 +283,14 @@
             border-color: rgba(111, 66, 193, 0.2);
         }
 
+        .new-year-event .participants-section {
+            border-color: rgba(220, 53, 69, 0.2);
+        }
+
+        .education-event .participants-section {
+            border-color: rgba(23, 162, 184, 0.2);
+        }
+
         .participants-title {
             font-weight: bold;
             color: #333;
@@ -259,56 +305,23 @@
             margin-right: 8px;
         }
 
-        .teams {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .team {
-            padding: 8px 10px;
-            background: rgba(40, 167, 69, 0.1);
-            border-radius: 8px;
-            font-size: 0.85em;
-            border-left: 3px solid #28a745;
-        }
-
-        .team-number {
-            font-weight: bold;
-            color: #28a745;
-            margin-right: 8px;
-        }
-
-        .team-members {
-            color: #495057;
-        }
-
-        .incomplete-team {
-            background: rgba(255, 193, 7, 0.1);
-            border-left-color: #ffc107;
-        }
-
-        .incomplete-team .team-number {
-            color: #e67e22;
-        }
-
         .participants-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 8px;
         }
 
         .participant-name {
-            background: rgba(0, 123, 255, 0.1);
-            color: #495057;
-            padding: 4px 8px;
-            border-radius: 6px;
-            font-size: 0.85em;
-            border: 1px solid rgba(0, 123, 255, 0.2);
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            white-space: nowrap;
         }
 
         .participant-group {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .participant-group:last-child {
@@ -316,35 +329,47 @@
         }
 
         .group-label {
-            font-size: 0.9em;
             font-weight: bold;
-            color: #6c757d;
-            margin-bottom: 5px;
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+            padding-left: 5px;
+        }
+
+        .teams {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .team {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 12px;
+            border-radius: 10px;
+            border-left: 3px solid #28a745;
+        }
+
+        .team-name {
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 10px;
+            font-size: 1em;
         }
 
         .footer {
-            margin-top: 25px;
-            padding-top: 15px;
-            border-top: 2px solid #dee2e6;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
             text-align: center;
-            color: #6c757d;
-            font-style: italic;
+            color: #666;
             font-size: 0.9em;
-            line-height: 1.5;
+            line-height: 1.8;
         }
 
         /* 태블릿 최적화 */
         @media (min-width: 768px) {
-            body {
-                padding: 20px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            
             .container {
-                max-width: 650px;
-                padding: 30px;
+                padding: 35px;
             }
             
             .header h1 {
@@ -571,6 +596,86 @@
                         <span class="participant-name">권오성</span>
                         <span class="participant-name">최병혁</span>
                         <span class="participant-name">윤의철</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1월 26일: KVA 신년인사회 -->
+            <div class="event-card new-year-event">
+                <div class="event-date">2026년 1월 26일 (일요일)</div>
+                <div class="event-title">
+                    KVA 신년인사회
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🕕</div>
+                        <div class="detail-text"><strong>시간:</strong> 오후 6시 (18:00)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> 럭키인디아 (합정역 2번출구)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎊</div>
+                        <div class="detail-text"><strong>주최:</strong> KVA (카투사연합회)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📋</div>
+                        <div class="detail-text"><strong>내용:</strong> 2026년 신년인사 및 친목 모임</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2월 20일: 한미동맹 교육 (1차) -->
+            <div class="event-card education-event">
+                <div class="event-date">2026년 2월 20일 (목요일)</div>
+                <div class="event-title">
+                    한미동맹 교육
+                    <span class="session-badge">1차</span>
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🕥</div>
+                        <div class="detail-text"><strong>시간:</strong> 오전 10시 30분 (10:30)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> 캠프 험프리스 (Camp Humphreys)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎖️</div>
+                        <div class="detail-text"><strong>대상:</strong> 미2사단 순환배치여단 (Rotational Unit)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📚</div>
+                        <div class="detail-text"><strong>내용:</strong> 한미동맹의 역사와 중요성 교육</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2월 20일: 한미동맹 교육 (2차) -->
+            <div class="event-card education-event">
+                <div class="event-date">2026년 2월 20일 (목요일)</div>
+                <div class="event-title">
+                    한미동맹 교육
+                    <span class="session-badge">2차</span>
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🕑</div>
+                        <div class="detail-text"><strong>시간:</strong> 오후 2시 (14:00)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> 캠프 험프리스 (Camp Humphreys)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎖️</div>
+                        <div class="detail-text"><strong>대상:</strong> 미2사단 순환배치여단 (Rotational Unit)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📚</div>
+                        <div class="detail-text"><strong>내용:</strong> 한미동맹의 역사와 중요성 교육</div>
                     </div>
                 </div>
             </div>
