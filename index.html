@@ -243,117 +243,62 @@
         .detail-item {
             display: flex;
             align-items: flex-start;
+            gap: 10px;
             padding: 10px;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 8px;
-            font-size: 0.95em;
-            line-height: 1.4;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .detail-item:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateX(3px);
         }
 
         .detail-icon {
-            margin-right: 10px;
-            font-size: 1.1em;
-            width: 20px;
-            text-align: center;
+            font-size: 1.2em;
             flex-shrink: 0;
-            margin-top: 2px;
         }
 
         .detail-text {
-            flex: 1;
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .detail-text strong {
+            color: #333;
+            font-weight: 600;
         }
 
         .participants-section {
             margin-top: 15px;
             padding: 15px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 12px;
+            background: rgba(40, 167, 69, 0.05);
+            border-radius: 10px;
             border: 2px solid rgba(40, 167, 69, 0.2);
         }
 
-        .meeting-event .participants-section {
-            border-color: rgba(0, 123, 255, 0.2);
-        }
-
-        .special-event .participants-section {
-            border-color: rgba(253, 126, 20, 0.2);
-        }
-
-        .mou-event .participants-section {
-            border-color: rgba(111, 66, 193, 0.2);
-        }
-
-        .new-year-event .participants-section {
-            border-color: rgba(220, 53, 69, 0.2);
-        }
-
-        .education-event .participants-section {
-            border-color: rgba(23, 162, 184, 0.2);
-        }
-
-        .participants-title {
-            font-weight: bold;
-            color: #333;
+        .participants-section h4 {
+            color: #28a745;
             margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            font-size: 1em;
+            font-size: 1.1em;
         }
 
-        .participants-title::before {
-            content: '👥';
-            margin-right: 8px;
-        }
-
-        .participants-list {
+        .participant-list {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
         }
 
         .participant-name {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            white-space: nowrap;
-        }
-
-        .participant-group {
-            margin-bottom: 12px;
-        }
-
-        .participant-group:last-child {
-            margin-bottom: 0;
-        }
-
-        .group-label {
-            font-weight: bold;
-            color: #555;
-            margin-bottom: 8px;
+            padding: 8px 12px;
+            background: white;
+            border-radius: 8px;
             font-size: 0.95em;
-            padding-left: 5px;
-        }
-
-        .teams {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .team {
-            background: rgba(255, 255, 255, 0.6);
-            padding: 12px;
-            border-radius: 10px;
+            color: #333;
             border-left: 3px solid #28a745;
-        }
-
-        .team-name {
-            font-weight: bold;
-            color: #28a745;
-            margin-bottom: 10px;
-            font-size: 1em;
         }
 
         .footer {
@@ -362,56 +307,51 @@
             border-top: 2px solid #e9ecef;
             text-align: center;
             color: #666;
-            font-size: 0.9em;
+            font-size: 0.95em;
             line-height: 1.8;
+        }
+
+        .footer p {
+            margin-bottom: 8px;
+        }
+
+        /* 스크롤바 스타일링 */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(102, 126, 234, 0.8);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(102, 126, 234, 1);
         }
 
         /* 태블릿 최적화 */
         @media (min-width: 768px) {
             .container {
-                padding: 35px;
+                padding: 30px;
             }
-            
+
             .header h1 {
                 font-size: 2.2em;
             }
-            
-            .header p {
-                font-size: 1.1em;
-            }
-            
-            .rsvp-notice {
-                font-size: 1.2em;
-                padding: 20px;
-            }
-            
-            .event-card {
-                padding: 25px;
-            }
-            
-            .event-date {
-                font-size: 1.3em;
-            }
-            
+
             .event-title {
                 font-size: 1.5em;
             }
-            
-            .detail-item {
+
+            .detail-text {
                 font-size: 1em;
-                padding: 12px;
             }
-            
-            .teams {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
-            }
-            
-            .participants-list {
-                justify-content: flex-start;
-            }
-            
+
             .event-card:hover {
                 transform: translateY(-3px);
                 box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
@@ -489,6 +429,32 @@
         </div>
 
         <div class="events">
+
+            <!-- 1월 2일: 전후임 회장단 신년모임 -->
+            <div class="event-card new-year-event">
+                <div class="event-date">2026년 1월 2일 (금요일)</div>
+                <div class="event-title">
+                    전후임 회장단 신년모임
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🕥</div>
+                        <div class="detail-text"><strong>시간:</strong> 오후 5시 30분 (17:30)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> DHL (용산)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">👥</div>
+                        <div class="detail-text"><strong>대상:</strong> KDVA 전후임 회장단</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎊</div>
+                        <div class="detail-text"><strong>내용:</strong> 2026년 신년 인사 및 간담회</div>
+                    </div>
+                </div>
+            </div>
 
             <!-- 1월 9일: 주한미군사 신년 리셉션 -->
             <div class="event-card new-year-event">
