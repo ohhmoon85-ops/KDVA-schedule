@@ -129,6 +129,16 @@
             background: linear-gradient(145deg, #f0f9ff, #e0f2fe);
         }
 
+        .memorial-event {
+            border-left-color: #6c757d;
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+        }
+
+        .exhibition-event {
+            border-left-color: #20c997;
+            background: linear-gradient(145deg, #e8f5f1, #d1ebe4);
+        }
+
         .event-date {
             display: flex;
             align-items: center;
@@ -165,6 +175,14 @@
 
         .education-event .event-date::before {
             content: '🎓';
+        }
+
+        .memorial-event .event-date::before {
+            content: '🕊️';
+        }
+
+        .exhibition-event .event-date::before {
+            content: '🎪';
         }
 
         .event-title {
@@ -211,6 +229,16 @@
         .education-event .participant-count {
             background: linear-gradient(45deg, #17a2b8, #20c997);
             box-shadow: 0 2px 8px rgba(23, 162, 184, 0.3);
+        }
+
+        .memorial-event .participant-count {
+            background: linear-gradient(45deg, #6c757d, #495057);
+            box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+        }
+
+        .exhibition-event .participant-count {
+            background: linear-gradient(45deg, #20c997, #17a2b8);
+            box-shadow: 0 2px 8px rgba(32, 201, 151, 0.3);
         }
 
         .vip-badge {
@@ -488,6 +516,121 @@
                     <div class="detail-item">
                         <div class="detail-icon">📋</div>
                         <div class="detail-text"><strong>참석자:</strong> 윤의철, 양태봉, 김정혁</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2월 25일: 주한미군 전사자 추모비 제막식 -->
+            <div class="event-card memorial-event">
+                <div class="event-date">2026년 2월 25일 (화요일)</div>
+                <div class="event-title">
+                    주한미군 전사자 추모비 제막식
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🕑</div>
+                        <div class="detail-text"><strong>시간:</strong> 오후 2시 (14:00)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> 전쟁기념관</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎖️</div>
+                        <div class="detail-text"><strong>행사:</strong> 주한미군 전사자 추모비 제막식 거행</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3월 13일: 제22회 한미동맹포럼 & 주한미군전사자 추모비 헌화 행사 -->
+            <div class="event-card memorial-event">
+                <div class="event-date">2026년 3월 13일 (금요일)</div>
+                <div class="event-title">
+                    제22회 한미동맹포럼 & 주한미군전사자 추모비 헌화 행사
+                    <span class="vip-badge">VIP</span>
+                    <span class="participant-count">3명</span>
+                </div>
+                <div class="event-details">
+                    <!-- 한미동맹포럼 -->
+                    <div class="detail-item">
+                        <div class="detail-icon">🎤</div>
+                        <div class="detail-text"><strong>제22회 한미동맹포럼</strong><br>
+                        • 시간: 오전 8시 - 9시 15분 (08:00~09:15)<br>
+                        • 장소: 전쟁기념관 피스앤파크 컨벤션 로얄홀 (3F)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">👔</div>
+                        <div class="detail-text"><strong>초청연사:</strong> 마이클 G. 디셈보 (Michael G. DeSombre)<br>
+                        미 국무부 동아태차관보 (Deputy Assistant Secretary, EAP)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📚</div>
+                        <div class="detail-text"><strong>주제:</strong> 미래 한미동맹 발전방향<br>
+                        (The Future of the Korea-U.S. Alliance)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🏢</div>
+                        <div class="detail-text"><strong>주최:</strong> 한미동맹재단, 주한미군전우회 (KDVA)</div>
+                    </div>
+                    
+                    <!-- 헌화 행사 -->
+                    <div class="detail-item" style="margin-top: 15px; padding-top: 15px; border-top: 2px dashed rgba(0,0,0,0.1);">
+                        <div class="detail-icon">🕊️</div>
+                        <div class="detail-text"><strong>주한미군전사자 추모비 헌화 행사</strong><br>
+                        • 시간: 오전 9시 30분 - 9시 45분 (09:30~09:45)<br>
+                        • 장소: 전쟁기념관내 주한미군 전사자 추모비</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📝</div>
+                        <div class="detail-text"><strong>진행순서:</strong><br>
+                        • 09:30~09:33: 추모비 설립 배경 설명<br>
+                        • 09:33~09:38: 국민의례 (한·미 양국 국가 연주)<br>
+                        • 09:38~09:42: 헌화 및 묵념 (디셈보 차관보/임호영 회장/유명환 이사장)<br>
+                        • 09:42~09:45: 사진 촬영</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📋</div>
+                        <div class="detail-text"><strong>KDVA 참석자:</strong> 윤의철, 문형철, 김수환</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📧</div>
+                        <div class="detail-text"><strong>RSVP:</strong> 2026년 3월 3일까지<br>
+                        kusaf2020@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4월 21일: AUSA 장비전시회 & KDVA 험프리스챕터 Meet and Greet -->
+            <div class="event-card exhibition-event">
+                <div class="event-date">2026년 4월 21일 (화요일)</div>
+                <div class="event-title">
+                    AUSA 장비전시회 & KDVA 험프리스챕터 Meet and Greet
+                    <span class="participant-count">5명</span>
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">🕙</div>
+                        <div class="detail-text"><strong>시간:</strong> 오전 10시 (10:00)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> 캠프 험프리스 (Camp Humphreys)</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎯</div>
+                        <div class="detail-text"><strong>주요행사:</strong> AUSA (미육군협회) 장비전시회</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🤝</div>
+                        <div class="detail-text"><strong>부대행사:</strong> KDVA 험프리스챕터 Meet and Greet</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📋</div>
+                        <div class="detail-text"><strong>참석자:</strong> 윤의철, 양태봉, 김정혁, 김수환, 문형철</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">ℹ️</div>
+                        <div class="detail-text"><strong>설명:</strong> AUSA 장비전시회와 병행하여 KDVA 험프리스챕터 회원들과의 교류 시간을 갖습니다.</div>
                     </div>
                 </div>
             </div>
