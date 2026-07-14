@@ -715,6 +715,31 @@
 
             .toggle-past-btn { font-size: 0.95em; padding: 13px; }
         }
+        .session-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9em;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin: 4px 0 2px 0;
+        }
+
+        .session-header.daytime {
+            background: linear-gradient(45deg, rgba(255, 193, 7, 0.18), rgba(255, 152, 0, 0.12));
+            color: #8a6100;
+        }
+
+        .session-header.evening {
+            background: linear-gradient(45deg, rgba(102, 126, 234, 0.18), rgba(118, 75, 162, 0.12));
+            color: #4a3a8a;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 480px) {
+            .session-header { font-size: 0.85em; padding: 7px 10px; }
+        }
     </style>
 </head>
 <body>
@@ -833,14 +858,16 @@
                 </div>
             </div>
 
-            <!-- 9월 18일: Alliance and Veterans Conference - 1 -->
+            <!-- 9월 18일: Alliance and Veterans Conference - 1 (주간) + 미독립 250주년 만찬 (야간) -->
             <div class="event-card conference-event">
                 <div class="event-date">2026년 9월 18일 (금요일)</div>
                 <div class="event-title">
                     Alliance and Veterans Conference — 1
-                    <span class="session-badge">서울 세션</span>
+                    <span class="session-badge">서울 · 주야간 연계</span>
                 </div>
                 <div class="event-details">
+
+                    <div class="session-header daytime">☀️ 주간 — Alliance and Veterans Conference</div>
                     <div class="detail-item">
                         <div class="detail-icon">📍</div>
                         <div class="detail-text"><strong>장소:</strong> 서울</div>
@@ -849,25 +876,33 @@
                         <div class="detail-icon">📋</div>
                         <div class="detail-text"><strong>참석자:</strong> 미정</div>
                     </div>
-                </div>
-            </div>
 
-            <!-- 9월 18일: 주한미군전우회 임원진 골프행사 -->
-            <div class="event-card golf-event">
-                <div class="event-date">2026년 9월 18일 (금요일)</div>
-                <div class="event-title">
-                    주한미군전우회 임원진 골프행사
-                    <span class="participant-count">임원진</span>
-                </div>
-                <div class="event-details">
+                    <div class="session-header evening">🌙 야간 — 미독립 250주년 계기 만찬행사</div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎯</div>
+                        <div class="detail-text"><strong>주제:</strong> 자유의 250년, 미래를 향한 동맹</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🕕</div>
+                        <div class="detail-text"><strong>시간:</strong> 18:00 ~ 20:00 (120분)</div>
+                    </div>
                     <div class="detail-item">
                         <div class="detail-icon">📍</div>
-                        <div class="detail-text"><strong>장소:</strong> 오산 체력단련장</div>
+                        <div class="detail-text"><strong>장소:</strong> 신라호텔</div>
                     </div>
                     <div class="detail-item">
-                        <div class="detail-icon">📋</div>
-                        <div class="detail-text"><strong>참석자:</strong> 임원진 (인원 미정)</div>
+                        <div class="detail-icon">🏛️</div>
+                        <div class="detail-text"><strong>주관:</strong> 국가보훈부 · 외교부 공동주관</div>
                     </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🎖️</div>
+                        <div class="detail-text"><strong>주요인사:</strong> 외교장관, 보훈장관, 주한미대사, 미의회대표, 유엔사령관, 유엔참전용사</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">🍽️</div>
+                        <div class="detail-text"><strong>만찬:</strong> 양식정찬 / 축하공연 (제안: 박정현, 존박)</div>
+                    </div>
+
                 </div>
             </div>
 
@@ -886,6 +921,25 @@
                     <div class="detail-item">
                         <div class="detail-icon">📋</div>
                         <div class="detail-text"><strong>참석자:</strong> 미정</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10월 중: 주한미군전우회 임원진 골프행사 -->
+            <div class="event-card golf-event">
+                <div class="event-date">2026년 10월 중 (일자 미정)</div>
+                <div class="event-title">
+                    주한미군전우회 임원진 골프행사
+                    <span class="tbd-badge">일정 확정 예정</span>
+                </div>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">📍</div>
+                        <div class="detail-text"><strong>장소:</strong> 오산 체력단련장</div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">📋</div>
+                        <div class="detail-text"><strong>참석자:</strong> 임원진 (인원 미정)</div>
                     </div>
                 </div>
             </div>
